@@ -1,0 +1,110 @@
+[
+    {
+        "nom": "qqchose",
+        "categ": "animaleries",
+        "img":"images/prod_imgs/prod_img.png",
+        "sous_categ": "alimentaion compagnie",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus dia",
+        "prix":"700 DA",
+        "exprix":"800 DA",
+        "contact":"0670053591"
+
+
+    },
+    {
+        "nom": "qqchose",
+        "categ": "animaleries",
+        "img":"images/prod_imgs/prod_img.png",
+        "sous_categ": "alimentaion bétail",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus dia",
+        "prix":"700 DA",
+        "exprix":"800 DA",
+        "contact":"0670053591"
+
+
+    },
+    {
+        "nom": "qqchose",
+        "categ": "parapharmacetiques",
+        "img":"images/prod_imgs/prod_img.png",
+        "sous_categ": "parapharm1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus dia",
+        "prix":"700 DA",
+        "exprix":"800 DA",
+        "contact":"0670053591"
+
+
+    },
+    {
+        "nom": "qqchose",
+        "categ": "parapharmacetiques",
+        "img":"images/prod_imgs/prod_img.png",
+        "sous_categ": "parapharm2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus dia",
+        "prix":"700 DA",
+        "exprix":"800 DA",
+        "contact":"0670053591"
+
+
+    },
+    {
+        "nom": "qqchose",
+        "categ": "informatiques et bureautiques",
+        "img":"images/prod_imgs/prod_img.png",
+        "sous_categ": "pc",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus dia",
+        "prix":"700 DA",
+        "exprix":"800 DA",
+        "contact":"0670053591"
+
+
+    },
+    {
+        "nom": "qqchose",
+        "categ": "informatiques et bureautiques",
+        "img":"images/prod_imgs/prod_img.png",
+        "sous_categ": "smartphones",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus dia",
+        "prix":"700 DA",
+        "exprix":"800 DA",
+        "contact":"0670053591"
+
+
+    },
+    {
+        "nom": "qqchose",
+        "categ": "cosmétiques",
+        "img":"images/prod_imgs/prod_img.png",
+        "sous_categ": "santé",
+        "description": "Lorem ipsum dolor sit ametent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent ...",
+        "prix":"700 DA",
+        "exprix":"800 DA",
+        "contact":"0670053591"
+
+
+    },
+    {
+        "nom": "qqchose",
+        "categ": "cosmétiques",
+        "img":"images/prod_imgs/prod_img.png",
+        "sous_categ": "beauté",
+        "description": "Lour adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent ...",
+        "prix":"700 DA",
+        "exprix":"800 DA",
+        "contact":"0670053591"
+
+
+    },
+    {
+        "nom": "qqchose",
+        "categ": "animaleries",
+        "img":"images/prod_imgs/prod_img.png",
+        "sous_categ": "alimentaion suavages",
+        "description": "Lorem ipsumnisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis i",
+        "exprix":"800 DA",
+        "contact":"0670053591"
+
+
+    }
+
+]

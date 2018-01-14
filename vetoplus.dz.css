@@ -1,0 +1,47 @@
+body{
+    width: 100%;
+}
+
+.logo img{
+    width: 58%;
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.slide{
+    padding: 0;
+}
+.slide img{
+    width: 70%;
+}
+.ab{
+    background: rgb(131, 110, 110);
+    min-height: 30px;
+    border: 1px solid black;
+}
+
+.prod img {
+    width: 100%;
+    display: block;
+}
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+li ins{
+    color: rgb(0, 255, 115);
+}
+li del{
+    color: red;
+}
+.big_title{
+    font-weight: bold;
+    color: aqua;
+}
