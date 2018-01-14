@@ -1,6 +1,11 @@
 body{
     width: 100%;
 }
+.container{
+    margin: 0 auto;
+    width: 95%;
+    box-sizing: content-box;
+}
 
 .logo img{
     width: 58%;
@@ -16,17 +21,29 @@ body{
     padding: 0;
 }
 .slide img{
-    width: 70%;
+    width: 100%;
 }
 .ab{
-    background: rgb(131, 110, 110);
+    background: rgb(207, 232, 241);
     min-height: 30px;
     border: 1px solid black;
+    box-shadow: 0 0 10px black;
 }
 
+.prod_list{
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+}
 .prod img {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
     display: block;
+    border: 1px solid black;
+    padding: 3px;
+}
+figcaption{
+    text-align: center;
 }
 .row-eq-height {
     display: -webkit-box;
@@ -35,13 +52,20 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
+hr{
+    clear: both;
+    border-color: black;
+}
 li ins{
-    color: rgb(0, 255, 115);
+    font-size: 1.7rem;
+    color: rgb(255, 0, 0);
 }
 li del{
-    color: red;
+    font-size: 1.3rem;
+    color: rgb(87, 88, 10);
 }
 .big_title{
+    font-size: 2rem;
     font-weight: bold;
-    color: aqua;
+    color: rgb(18, 1, 77);
 }
