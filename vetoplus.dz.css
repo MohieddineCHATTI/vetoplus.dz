@@ -23,6 +23,12 @@ body{
 .slide img{
     width: 100%;
 }
+#nav_bar_elements ul{
+    padding: 10px;
+    display: inline;
+    text-align: center;
+    background-color: rgb(166, 166, 196);
+}
 .ab{
     background: rgb(207, 232, 241);
     min-height: 30px;

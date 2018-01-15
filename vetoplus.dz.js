@@ -25,6 +25,30 @@
 
     }
     starting_page();
+
+    // creating the all products menu
+    function show_all(){
+        $("#prod_list").empty();
+        $.ajax({
+
+            type: "GET",
+            url: "http://www.vetoplus.net/data.json",
+            dataType: "json",
+            contentType: "application/json",
+            crossDomain: true,
+            success: function(all){
+            console.log(all[1].nom+" "+all[1].nom);
+            for (var m=0; m<all.length; m++){
+        $("#prod_list").append("<hr><li class='col-sm-12 prod row'><figure class='col-sm-4'><img src='"+all[m].img+"' alt='image du produit' ><figcaption>"+all[m].nom+"</figcaption></figure><p class='col-sm-5'><span class='big_title'>description: </span><br>"+all[m].description+"</p><p class='col-sm-3'><span class='big_title'>prix: </span> <br><del>"+all[m].exprix +"</del>--<ins>"+all[m].prix+"</ins><br><span class='big_title'>contacter:<br></span> <span class='contact_info'>"+all[m].contact+"</span></p></li><br>");
+
+            }
+            },
+        
+
+
+        });
+
+    }
     // creating the category list in the left sidebar
         function category_list(){
         
