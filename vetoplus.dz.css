@@ -24,16 +24,31 @@ body{
     width: 100%;
 }
 #nav_bar_elements ul{
+    color: white;
     padding: 10px;
     display: inline;
     text-align: center;
-    background-color: rgb(166, 166, 196);
+    background-color: rgb(4, 88, 88);
 }
+#nav_bar_elements ul li{
+    color: white;
+    padding: 10px;
+    display: none;
+    min-width: 100px;
+    background-color: rgb(2, 31, 31);
+    z-index: 1000;
+}
+/*#nav_bar_elements ul:hover li{
+    display: block;
+    z-index: 1000;
+
+}
+*/
 .ab{
     background: rgb(207, 232, 241);
     min-height: 30px;
     border: 1px solid black;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .prod_list{

@@ -2,6 +2,7 @@
 
 
 // creating the top products menu
+
         function starting_page(){
 
         $.ajax({
@@ -24,9 +25,9 @@
         });
 
     }
-    starting_page();
+starting_page();
 
-    // creating the all products menu
+// creating the all products menu
     function show_all(){
         $("#prod_list").empty();
         $.ajax({
@@ -49,7 +50,7 @@
         });
 
     }
-    // creating the category list in the left sidebar
+// creating the category list in the left sidebar
         function category_list(){
         
         $.ajax({
@@ -65,15 +66,19 @@
                 for (var i=0; i<all_prod.length; i++){
                         if (all_prod[i].categ=="animaleries" && !sous_categorie.includes(all_prod[i].sous_categ)){
                             $("#anim").append("<li>"+all_prod[i].sous_categ+"</li>");
+                            $("#anim_list").append("<li id='"+all_prod[i].sous_categ+"'>"+all_prod[i].sous_categ+"</li>");
                             sous_categorie.push(all_prod[i].sous_categ);
                         }else if (all_prod[i].categ=="cosmétiques" && !sous_categorie.includes(all_prod[i].sous_categ)){
                             $("#cosm").append("<li>"+all_prod[i].sous_categ+"</li>");
+                            $("#cosm_list").append("<li id='"+all_prod[i].sous_categ+"'>"+all_prod[i].sous_categ+"</li>");
                             sous_categorie.push(all_prod[i].sous_categ);
                         }else if (all_prod[i].categ=="informatiques et bureautiques" && !sous_categorie.includes(all_prod[i].sous_categ)){
                             $("#infor").append("<li>"+all_prod[i].sous_categ+"</li>");
+                            $("#infor_list").append("<li id='"+all_prod[i].sous_categ+"'>"+all_prod[i].sous_categ+"</li>");
                             sous_categorie.push(all_prod[i].sous_categ);
                         }else if (all_prod[i].categ=="parapharmacetiques" && !sous_categorie.includes(all_prod[i].sous_categ)){
                             $("#parapharm").append("<li>"+all_prod[i].sous_categ+"</li>");
+                            $("#parapharm_list").append("<li id='"+all_prod[i].sous_categ+"'>"+all_prod[i].sous_categ+"</li>");
                             sous_categorie.push(all_prod[i].sous_categ);
                         }
                 
@@ -120,3 +125,7 @@
 
 
          // function filter by sub_category
+        
+$('ul').find("p").click(function(){
+    alert('kjfhqs');
+});
