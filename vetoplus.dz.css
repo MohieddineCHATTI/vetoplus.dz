@@ -23,6 +23,9 @@ body{
 .slide img{
     width: 100%;
 }
+#nav_bar_elements{
+    text-align: right;
+}
 #nav_bar_elements ul{
     color: white;
     padding: 10px;
@@ -38,12 +41,6 @@ body{
     background-color: rgb(2, 31, 31);
     z-index: 1000;
 }
-/*#nav_bar_elements ul:hover li{
-    display: block;
-    z-index: 1000;
-
-}
-*/
 .ab{
     background: rgb(207, 232, 241);
     min-height: 30px;

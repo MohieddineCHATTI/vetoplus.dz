@@ -18,18 +18,18 @@
 
             </div>
             <div class="row">
-                <div class="col-sm-4"></div>
-                <div id="nav_bar_elements" class="nav_bar_elements col-sm-8">
+                    <ul id="filtred_list" class="filtred_list col-sm-2"><input type="text" id="search_field" onkeyup="filter_func()" placeholder="Rechercher.."></ul>
+                <div id="nav_bar_elements" class="nav_bar_elements col-sm-10">
                         <ul id="show_all" onclick="show_all()">Tous nos produits</ul>
                         <ul id="show_top_prod" onclick="starting_page()">Top produits</ul>
                         <ul id="anim_list" class="nav_list" ><span onclick="filter_by_categ('animaleries')" >Animaleries</span></ul>
                         <ul id="parapharm_list" class="nav_list" ><span onclick="filter_by_categ('parapharmacetiques')" >Parapharmacetiques</span></ul>
                         <ul id="cosm_list" class="nav_list" ><span onclick="filter_by_categ('cosmétiques')" >Cosmétiques</span></ul>
                         <ul id="infor_list" class="nav_list" ><span onclick="filter_by_categ('informatiques et bureautiques')" >Informatiques et bureautiques</span></ul>
+                        </div>
 
                 </div>
                 
-
             </div>
             
             <br>
