@@ -51,8 +51,8 @@ starting_page();
 
     }
 // creating the category list in the left sidebar
+var all_tags=[];
         function tags_list(){
-        var all_tags;
         $.ajax({
 
             type: "GET",
@@ -62,22 +62,24 @@ starting_page();
             crossDomain: true,
             success: function(all_prod){
                 //making tags list
-                all_tags=[];
                 for (var i=0; i<all_prod.length; i++){
                         if (!all_tags.includes(all_prod[i].nom)){
-                            $("#tags_list").append("<li><span>"+all_prod[i].nom+"</span></li>");
+                            $("#tags_list").append("<li>"+all_prod[i].nom+"</li>");
                             all_tags.push(all_prod[i].nom);
                     
-                        }else if (!all_tags.includes(all_prod[i].categ)){
-                            $("#tags_list").append("<li><span>"+all_prod[i].categ+"</span></li>");
+                        }
+                        if (!all_tags.includes(all_prod[i].categ)){
+                            $("#tags_list").append("<li>"+all_prod[i].categ+"</li>");
                             all_tags.push(all_prod[i].categ);
                     
-                        }else if (!all_tags.includes(all_prod[i].sous_categ)){
-                            $("#tags_list").append("<li><span>"+all_prod[i].sous_categ+"</span></li>");
+                        }
+                        if (!all_tags.includes(all_prod[i].sous_categ)){
+                            $("#tags_list").append("<li>"+all_prod[i].sous_categ+"</li>");
                             all_tags.push(all_prod[i].sous_categ);
                     
-                        }else if (!all_tags.includes(all_prod[i].sous_categ)){
-                            $("#tags_list").append("<li><span>"+all_prod[i].marque+"</span></li>");
+                        }
+                        if (!all_tags.includes(all_prod[i].marque)){
+                            $("#tags_list").append("<li>"+all_prod[i].marque+"</li>");
                             all_tags.push(all_prod[i].marque);
                     
                         }
@@ -119,20 +121,15 @@ starting_page();
 
         });
         };
-
-
-        var tst_lst =["sjkfh","qsfjfq","abqsf","skjfhq","zkjfhq"];
-        for (var y=0; y<tst_lst.length; y++){
-            $("#filtred_list ").append("<li style='display:none' class='filt'>"+tst_lst[y]+"</li>");
-        }
+        
          // function filter by entering input in search field
          function filter_func() {
               // Declare variables
-            var search_field ,key_word,filtred_list,filtred_elements, li, a, i;
+            var search_field ,key_word,filtred_list,filtred_elements;
             search_field = document.getElementById('search_field');
             key_word = search_field.value.toUpperCase();
-            filtred_list = document.getElementById("filtred_list");
-            filtred_elements = filtred_list.getElementsByClassName('filt');
+            filtred_list = document.getElementById("tags_list");
+            filtred_elements = filtred_list.getElementsByTagName('li');
 
             // Loop through all list items, and hide those who don't match the search query
 
@@ -160,5 +157,5 @@ starting_page();
              }
          
                  
-        
+            
         
