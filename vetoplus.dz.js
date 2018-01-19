@@ -15,7 +15,7 @@
             success: function(top_prod){
             console.log(top_prod[1].nom);
             for (var j=0; j<top_prod.length; j++){
-        $("#prod_list").append("<hr><li class='col-sm-12 prod row'><figure class='col-sm-4'><img src='"+top_prod[j].img+"' alt='image du produit' ><figcaption>"+top_prod[j].nom+"</figcaption></figure><p class='col-sm-5'><span class='big_title'>description: </span><br>"+top_prod[j].description+"</p><p class='col-sm-3'><span class='big_title'>prix: </span> <br><del>"+top_prod[j].exprix +"</del>--<ins>"+top_prod[j].prix+"</ins><br><span class='big_title'>contacter:<br></span> <span class='contact_info'>"+top_prod[j].contact+"</span></p></li><br>");
+        $("#prod_list").append("<hr><li class='col-sm-12 prod row'><figure class='col-sm-4'><img src='"+top_prod[j].img+"' alt='image du produit' ><figcaption>"+top_prod[j].nom+"</figcaption></figure><p class='col-sm-5'><span class='big_title'>la marque:</span>"+top_prod[j].marque+"<br><span class='big_title'>description: </span><br>"+top_prod[j].description+"</p><p class='col-sm-3'><span class='big_title'>prix: </span> <br><del>"+top_prod[j].exprix +"</del>--<ins>"+top_prod[j].prix+"</ins><br><span class='big_title'>contacter:<br></span> <span class='contact_info'>"+top_prod[j].contact+"</span></p></li><br>");
 
             }
             },
@@ -40,7 +40,7 @@ starting_page();
             success: function(all){
             console.log(all[1].nom+" "+all[1].nom);
             for (var m=0; m<all.length; m++){
-        $("#prod_list").append("<hr><li class='col-sm-12 prod row'><figure class='col-sm-4'><img src='"+all[m].img+"' alt='image du produit' ><figcaption>"+all[m].nom+"</figcaption></figure><p class='col-sm-5'><span class='big_title'>description: </span><br>"+all[m].description+"</p><p class='col-sm-3'><span class='big_title'>prix: </span> <br><del>"+all[m].exprix +"</del>--<ins>"+all[m].prix+"</ins><br><span class='big_title'>contacter:<br></span> <span class='contact_info'>"+all[m].contact+"</span></p></li><br>");
+        $("#prod_list").append("<hr><li class='col-sm-12 prod row'><figure class='col-sm-4'><img src='"+all[m].img+"' alt='image du produit' ><figcaption>"+all[m].nom+"</figcaption></figure><p class='col-sm-5'><span class='big_title'>la marque:</span>"+all[m].marque+"<br><span class='big_title'>description: </span><br>"+all[m].description+"</p><p class='col-sm-3'><span class='big_title'>prix: </span> <br><del>"+all[m].exprix +"</del>--<ins>"+all[m].prix+"</ins><br><span class='big_title'>contacter:<br></span> <span class='contact_info'>"+all[m].contact+"</span></p></li><br>");
 
             }
             },
@@ -51,8 +51,8 @@ starting_page();
 
     }
 // creating the category list in the left sidebar
-        function category_list(){
-        
+        function tags_list(){
+        var all_tags;
         $.ajax({
 
             type: "GET",
@@ -61,31 +61,29 @@ starting_page();
             contentType: "application/json",
             crossDomain: true,
             success: function(all_prod){
-                //making categories
-                var sous_categorie=[];
+                //making tags list
+                all_tags=[];
                 for (var i=0; i<all_prod.length; i++){
-                        if (all_prod[i].categ=="animaleries" && !sous_categorie.includes(all_prod[i].sous_categ)){
-                            $("#anim").append("<li>"+all_prod[i].sous_categ+"</li>");
-                            $("#anim_list").append("<li id='"+all_prod[i].sous_categ+"'>"+all_prod[i].sous_categ+"</li>");
-                            sous_categorie.push(all_prod[i].sous_categ);
-                        }else if (all_prod[i].categ=="cosmétiques" && !sous_categorie.includes(all_prod[i].sous_categ)){
-                            $("#cosm").append("<li>"+all_prod[i].sous_categ+"</li>");
-                            $("#cosm_list").append("<li id='"+all_prod[i].sous_categ+"'>"+all_prod[i].sous_categ+"</li>");
-                            sous_categorie.push(all_prod[i].sous_categ);
-                        }else if (all_prod[i].categ=="informatiques et bureautiques" && !sous_categorie.includes(all_prod[i].sous_categ)){
-                            $("#infor").append("<li>"+all_prod[i].sous_categ+"</li>");
-                            $("#infor_list").append("<li id='"+all_prod[i].sous_categ+"'>"+all_prod[i].sous_categ+"</li>");
-                            sous_categorie.push(all_prod[i].sous_categ);
-                        }else if (all_prod[i].categ=="parapharmacetiques" && !sous_categorie.includes(all_prod[i].sous_categ)){
-                            $("#parapharm").append("<li>"+all_prod[i].sous_categ+"</li>");
-                            $("#parapharm_list").append("<li id='"+all_prod[i].sous_categ+"'>"+all_prod[i].sous_categ+"</li>");
-                            sous_categorie.push(all_prod[i].sous_categ);
+                        if (!all_tags.includes(all_prod[i].nom)){
+                            $("#tags_list").append("<li><span>"+all_prod[i].nom+"</span></li>");
+                            all_tags.push(all_prod[i].nom);
+                    
+                        }else if (!all_tags.includes(all_prod[i].categ)){
+                            $("#tags_list").append("<li><span>"+all_prod[i].categ+"</span></li>");
+                            all_tags.push(all_prod[i].categ);
+                    
+                        }else if (!all_tags.includes(all_prod[i].sous_categ)){
+                            $("#tags_list").append("<li><span>"+all_prod[i].sous_categ+"</span></li>");
+                            all_tags.push(all_prod[i].sous_categ);
+                    
+                        }else if (!all_tags.includes(all_prod[i].sous_categ)){
+                            $("#tags_list").append("<li><span>"+all_prod[i].marque+"</span></li>");
+                            all_tags.push(all_prod[i].marque);
+                    
                         }
-                
-                }
 
 
-
+                 }
 
             },
 
@@ -93,7 +91,7 @@ starting_page();
         });
     };
 
-    category_list();
+    tags_list();
 
     // function filter by category
     function filter_by_categ(x){
@@ -108,7 +106,7 @@ starting_page();
                 success: function(data){
                 for (var k=0; k<data.length; k++){
                     if (data[k].categ==x){
-                        $("#prod_list").append("<hr><li class='col-sm-12 prod row'><figure class='col-sm-4'><img src='"+data[k].img+"' alt='image du produit' ><figcaption>"+data[k].nom+"</figcaption></figure><p class='col-sm-5'><span class='big_title'>description :</span><br>"+data[k].description+"</p><p class='col-sm-3'><span class='big_title'>prix:</span><br><del>"+data[k].exprix +"</del>--<ins>"+data[k].prix+"</ins><br><span class='big_title'>contacter: <br>"+data[k].contact+"</p></li><br><hr>");
+                        $("#prod_list").append("<hr><li class='col-sm-12 prod row'><figure class='col-sm-4'><img src='"+data[k].img+"' alt='image du produit' ><figcaption>"+data[k].nom+"</figcaption></figure><p class='col-sm-5'><span class='big_title'>la marque:</span>"+data[k].marque+"<br><span class='big_title'>description :</span><br>"+data[k].description+"</p><p class='col-sm-3'><span class='big_title'>prix:</span><br><del>"+data[k].exprix +"</del>--<ins>"+data[k].prix+"</ins><br><span class='big_title'>contacter: <br>"+data[k].contact+"</p></li><br><hr>");
 
 
                     
