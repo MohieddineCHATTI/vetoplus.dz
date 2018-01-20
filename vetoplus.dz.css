@@ -1,6 +1,5 @@
 body{
     width: 100%;
-    padding: 5px;
 }
 .container{
     margin: 0 auto;
@@ -33,14 +32,12 @@ body{
     display: inline;
     text-align: center;
     background-color: rgb(4, 88, 88);
+    cursor: pointer;
+    box-shadow: 4px 5px 7px black;
+    border: 1px solid darkblue;
 }
-#nav_bar_elements ul li{
-    color: white;
-    padding: 10px;
-    display: none;
-    min-width: 100px;
-    background-color: rgb(2, 31, 31);
-    z-index: 1000;
+#nav_bar_elements ul:hover{
+    background-color: darkblue;
 }
 .ab{
     background: rgb(207, 232, 241);
@@ -48,7 +45,19 @@ body{
     border: 1px solid black;
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
-
+.filtred_list{
+    background-color: rgb(4, 88, 88);
+    padding: 10px;
+    text-align: center;
+}
+.tag{
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.tag:hover{
+    color: blue;
+}
 .prod_list{
     padding-left: 0;
     padding-right: 0;
@@ -63,6 +72,7 @@ body{
 }
 figcaption{
     text-align: center;
+    font-weight: bold;
 }
 .row-eq-height {
     display: -webkit-box;
